@@ -1,4 +1,4 @@
-# execution-specs-contribution
+# Ethereum Execution Specs and Tests Contribution
 
 This project is dedicated to improving the health, maintainability, and efficiency of the [Execution Specs]() and [tests]() for Ethereum clients through targeted code quality enhancements and refactoring efforts. Below are the highlights of my contributions:
 
@@ -16,13 +16,13 @@ This project is dedicated to improving the health, maintainability, and efficien
 
 * **[Further Investigation of Solidity v0.8.23](https://github.com/ethereum/execution-spec-tests/issues/395):** Made further investigation into the alignment of Solidity v0.8.23 with Ethereum Execution Specs Test, most specifically to discover if the commandline Interface: An empty --yul-optimizations sequence can now be always provided.
 
-## In Reviev
+## In Review
 
 * **[Access List Type Refactor to Improve Code Maintainability](https://github.com/ethereum/execution-specs/pull/960):** The objective of this task involved refactoring the access list type used across various transaction classes to reduce redundancy and enhance maintainability. Key updates included:
   * Creating a new Access class to encapsulate the access list structure, which comprises an account and a tuple of slots (i.e., Tuple[Address, Tuple[Bytes32, ...]])
   * Developing helper functions encode_access_list and decode_access_list to handle the conversion between the new Access type and the previous tuple structure used for RLP encoding and decoding
   * Modifying existing test cases to reflect the new Access class, ensuring that tests continue to validate the correct functionality with the updated type.
 
-* [Mypy Diagnostics Enhancement](https://github.com/ethereum/execution-specs/pull/984): I configured `mypy` to enable additional diagnostics for more comprehensive type checking.
+* **[Mypy Diagnostics Enhancement](https://github.com/ethereum/execution-specs/pull/984):** I configured `mypy` to enable additional diagnostics for more comprehensive type checking.
 
-* [Transaction Nonce Type to U64 Update](https://github.com/ethereum/execution-specs/pull/995): I updated the transaction nonce type from U256 to U64 across each fork’s transaction class in response to EIP-2671.
+* **[Transaction Nonce Type to U64 Update](https://github.com/ethereum/execution-specs/pull/995):** I updated the transaction nonce type from U256 to U64 across each fork’s transaction class in response to EIP-2671.
